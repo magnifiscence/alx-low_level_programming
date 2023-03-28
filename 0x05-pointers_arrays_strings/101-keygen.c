@@ -5,32 +5,31 @@
 #define SUM 2772
 
 /**
- * main - starts here. 
- * for the program 101-crackme
+ * main - program that generate random valid
+ * passwords for the program 101-crackme
  * Return: Always 0 (success)
  */
 int main(void)
 {
-	int sum = 0, n = 0, i = 0;
-	char str[100];
+	int pass[100];
+	int i, sum, n;
+
+	sum = 0;
 
 	srand(time(NULL));
-	while (sum < SUM)
+
+	for (i = 0; i < 100; i++)
 	{
-		if (SUM - sum < 48)
-			sum -= str[--i];
-		else if (SUM - sum <= 126)
-			n = SUM - sum;
-		else
-			n = rand() % (126 - 48) + 48;
-		if (n)
+		pass[i] = rand() % 78;
+		sum += (pass[i] + '0');
+		putchar(pass[i] + '0');
+		if ((2772 - sum) - '0' < 78)
 		{
-			str[i++] = n;
+			n = 2772 - sum - '0';
 			sum += n;
+			putchar(n + '0');
+			break;
 		}
-		n = 0;
 	}
-	str[i] = '\0';
-	printf("%s", str);
 	return (0);
 }
