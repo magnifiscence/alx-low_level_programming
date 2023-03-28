@@ -1,31 +1,36 @@
 #include "main.h"
+#include <stdio.h>
+#include <stdlib.h>
+
+#define SUM 2772
+
 /**
- * main - program that generates random valid passwords 
+ * main - starts here. 
  * for the program 101-crackme
- *
  * Return: Always 0 (success)
  */
 int main(void)
 {
-	int pass[100];
-	int i, sum, n;
-
-	sum = 0;
+	int sum = 0, n = 0, i = 0;
+	char str[100];
 
 	srand(time(NULL));
-
-	for (i = 0; i < 100; i++)
+	while (sum < SUM)
 	{
-		pass[i] = rand() % 78;
-		sum += (pass[i] + '0');
-		putchar(pass[i] + '0');
-		if ((2772 - sum) - '0' < 78)
+		if (SUM - sum < 48)
+			sum -= str[--i];
+		else if (SUM - sum <= 126)
+			n = SUM - sum;
+		else
+			n = rand() % (126 - 48) + 48;
+		if (n)
 		{
-			n = 2772 - sum - '0';
+			str[i++] = n;
 			sum += n;
-			putchar(n + '0');
-			break;
 		}
+		n = 0;
 	}
+	str[i] = '\0';
+	printf("%s", str);
 	return (0);
 }
