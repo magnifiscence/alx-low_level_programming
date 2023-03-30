@@ -1,15 +1,8 @@
-#include "main.h"
-/**
- * file: 101 natural.c
- * Description:
- */
-
 #include <stdio.h>
 
 /**
- * main - lists all the natural nutural numbers below 1024 (excluded)
- *        that are multiples of 3 or 5
- *        Return: always 0.
+ * main - prints the sum of all multiples of 3 0r 5up to 1024
+ * Return: Always (success)
  */
 int main(void)
 {
