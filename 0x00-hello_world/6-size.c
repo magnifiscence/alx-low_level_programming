@@ -2,6 +2,7 @@
 /**
  * main - Prints the size of various types a based on
  * the computer it is compiled and run on..
+ * both 32 bit and 64 bit computer
  * Return: Always 0.
  */
 int main(void)
