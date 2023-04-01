@@ -8,9 +8,9 @@
  * @dest: buffer storing the string copy
  * @src: the source string
  * @n: max number of byte copied
- * Return: returns dest
+ * Return: returns
  */
-char *_strcpy(char *dest, char *src, int n)
+char *_strncpy(char *dest, char *src, int n)
 {
 	int i;
 
