@@ -8,8 +8,7 @@
  */
 size_t print_list(const list_t *h)
 {
-	s = 0;
-	size_t = 0;
+	size_t s = 0;
 
 	while (h)
 	{
