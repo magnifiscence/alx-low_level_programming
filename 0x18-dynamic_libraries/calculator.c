@@ -58,11 +58,11 @@ int main()
 	int num1, num2;
 	char operator;
 
-	_putchar('enter the first number: ');
+	_putchar('n1: ');
 	scanf("%d", &num1);
-	_putchar('enter operator (+, -, *, /, %): ');
+	_putchar('(+, -, *, /, %): ');
 	scanf("%c", &operator);
-	_putchar('enter second number: ');
+	_putchar('n2: ');
 	scanf("%d", &num2);
 
 	int result = calculator(num1, operator, num2);
